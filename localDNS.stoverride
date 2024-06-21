@@ -1,0 +1,11 @@
+name: 内网域名DNS重定向
+desc: 由system解析内网FQDN域名
+
+dns:
+  nameserver-policy:
+    '+.asus-lan': system
+    '+.ASUS-lan': system
+
+rules:
+  - DOMAIN-SUFFIX,asus-lan,DIRECT
+  - DOMAIN-SUFFIX,ASUS-lan,DIRECT
